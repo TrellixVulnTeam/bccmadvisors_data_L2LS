@@ -1,22 +1,23 @@
-from dataclasses import dataclass
-
 """
-    Indicators for the project here
+This document contains the various data classes necessary for mapping the sources and their IDs
+
+    The most important Indicators for the project here
 
     Economic Indicators
     1. GDP per capita (current USD)
     2. GDP Annual Growth (annual %)
-    3. Inflation, GDP Deflator (annual %) 
+    3. Inflation, GDP Deflator (annual %)
     4. Inflation Consumer Prices (annual %)
     5. Central Government Debt (% of GDP)
-    
-    Energy and Mining 
+
+    Energy and Mining
     1. Access to Electricity (% of population)
     2. Electric power consumption (kWh per capita)
+
 """
 
+from dataclasses import dataclass
 
-# data class of wb_sources
 
 @dataclass
 class Source:
@@ -44,7 +45,7 @@ class Source:
 
 
 @dataclass
-class world_development_indicators:
+class World_development_indicators:
     id = 2
     total_population = "SP.POP.TOTL"
     female_population = "SP.POP.TOTL.FE.IN"
@@ -61,7 +62,7 @@ class world_development_indicators:
 
 
 @dataclass
-class africa_development_indicators:
+class Africa_development_indicators:
     # more to be added
     id = 11
     current_account_balance_GDP_percentage = "BN.CAB.XOKA.GD.ZS"
@@ -98,7 +99,7 @@ class africa_development_indicators:
 
 
 @dataclass
-class country:
+class Country:
     id = 123456789
     angola = "AGO"
     benin = "BEN"
@@ -152,7 +153,6 @@ class country:
     western_sahara = "Western Sahara"
     zambia = "ZMB"
     zimbabwe = "ZWE"
-
 
 
 country_list = [
@@ -210,9 +210,10 @@ country_list = [
 ]
 
 
-
-
-
+""" Egypt, Ghana material *** 
+Credit growth 
+Infation 
+"""
 
 
 

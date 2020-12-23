@@ -29,3 +29,15 @@ Function call:                                                  Returns:
 This list of dictionaries can now be parsed in order to use the data however we choose.
 
 Later, we would like to make a csv file comprising of this data every time a user utilizes this program.
+
+
+**DATES**
+
+The ``wb_data.get_data`` function has a date argument which allows for access to data from specific time periods:
+
+    ``the_date = datetime.datetime(2019, 1, 1), datetime.datetime(2014, 1, 1)``
+    ``the_indicator = africa_development_indicators.gdp_per_capita_annual_growth``
+    ``the_country = country.kenya``
+    ``the_data = wb.get_data(the_indicator, the_country, the_date)``
+
+Each item in the list represents data from a single year and is a dictionary of dictionaries

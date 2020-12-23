@@ -1,0 +1,2 @@
+country,countryiso3code,indicator,date,value
+"{'id': 'GH', 'value': 'Ghana'}",GHA,"{'id': 'NY.GDP.PCAP.KD.ZG', 'value': 'GDP per capita growth (annual %)'}",2019,4.20043667238612
