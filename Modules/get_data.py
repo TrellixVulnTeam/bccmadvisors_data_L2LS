@@ -23,14 +23,18 @@ class Get_wb_data:
         list_of_field_names = list(fieldnames)
 
         i = 0
-        while i < len(the_data):                        # what is len(the_data)
+        while i < len(the_data):                                    # len(the_data) counts the number of years in the data
             for field in list_of_field_names:
-                data_dict.setdefault(field, the_data[i][field])           # = year_data[field]
+                data_dict.setdefault(field, the_data[i][field])     # = year_data[field]
 
-            for year_data in the_data:          # year_data is a dictionary for year's data, the_data is a list of dicts
+            for year_data in the_data:                              # year_data is a dictionary for year's data, the_data is a list of dicts
                 for key in year_data:
-                    if key in fieldnames:  # if the field exists in the list of desired fields
-                        print(key, '->', year_data[key])
+                    if key in fieldnames:                           # if the field exists in the list of desired fields
+                        index_value = year_data[key]                # returns a values for the year's data
+                        if index_value['value']:
+                            print(key, '->', index_value['value'])
+                        else:
+                            print(key, '->', year_data[key])
             i += 1
             print('------------------')
         return data_dict
