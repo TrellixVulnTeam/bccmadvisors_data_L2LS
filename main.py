@@ -1,4 +1,5 @@
 from Modules.scrapper import get_data_result
+# from Kivy.box import *
 import os
 import csv
 import json
@@ -6,6 +7,7 @@ import json
 
 def main():
     print("MAIN")
+    # BoxApp().run()
     get_data_result()
 
 
